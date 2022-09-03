@@ -1,3 +1,5 @@
+<img width="542" alt="屏幕截图 2022-09-03 201534" src="https://user-images.githubusercontent.com/30396815/188270015-e3428080-1223-4d46-9a52-070fc7b6f255.png">
+
 # Substrate Node Template
 
 [![Try on playground](https://img.shields.io/badge/Playground-Node_Template-brightgreen?logo=Parity%20Substrate)](https://docs.substrate.io/playground/) [![Matrix](https://img.shields.io/matrix/substrate-technical:matrix.org)](https://matrix.to/#/#substrate-technical:matrix.org)
