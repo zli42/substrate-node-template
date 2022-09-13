@@ -1,3 +1,18 @@
+### events
+* create
+* breed
+* transfer
+<img width="899" alt="events" src="https://user-images.githubusercontent.com/30396815/189861521-2a7fb0ec-b068-4188-bacb-ed53f1cddd3c.png">
+
+### storage
+* KittiesOwned: 某个用户拥有的全部 kitties. key: 用户id, value: kitties array
+* Kitties: 全部的 kitties. key: kitty's dna, value: kitty struct(dna, price, owner)
+* KittiesCount: 所有kitty数量
+<img width="871" alt="storage" src="https://user-images.githubusercontent.com/30396815/189862435-70f37e30-a5a2-49d5-8765-f0a77e743fc0.png">
+
+
+
+
 # Substrate Node Template
 
 [![Try on playground](https://img.shields.io/badge/Playground-Node_Template-brightgreen?logo=Parity%20Substrate)](https://docs.substrate.io/playground/) [![Matrix](https://img.shields.io/matrix/substrate-technical:matrix.org)](https://matrix.to/#/#substrate-technical:matrix.org)
