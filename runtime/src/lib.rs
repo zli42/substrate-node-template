@@ -276,8 +276,8 @@ impl pallet_kitties::Config for Runtime {
 	type KittyCurrency = Balances;
 	type KittyRandomness = RandomnessCollectiveFlip;
 	type KittyPrice = ConstU128<100_000>;
-	type MaxKittiesOwned = ConstU32<3>;
-	type MaxKittiesCount = ConstU32<10>;
+	type MaxKittiesOwned = ConstU32<5>;
+	type MaxKittiesCount = ConstU32<100>;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -344,6 +344,7 @@ mod benches {
 		[pallet_balances, Balances]
 		[pallet_timestamp, Timestamp]
 		[pallet_template, TemplateModule]
+		[pallet_kitties, KittiesModule]
 	);
 }
 

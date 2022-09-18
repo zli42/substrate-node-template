@@ -2,6 +2,12 @@
 
 pub use pallet::*;
 
+#[cfg(test)]
+mod mock;
+
+#[cfg(test)]
+mod tests;
+
 #[frame_support::pallet]
 pub mod pallet {
 	use frame_support::pallet_prelude::*;
@@ -18,9 +24,9 @@ pub mod pallet {
 	#[derive(Clone, Encode, Decode, PartialEq, TypeInfo, MaxEncodedLen)]
 	#[scale_info(skip_type_params(T))]
 	pub struct Kitty<T: Config> {
-		dna: DNA,
-		price: BalanceOf<T>,
-		owner: AccountOf<T>,
+		pub dna: DNA,
+		pub price: BalanceOf<T>,
+		pub owner: AccountOf<T>,
 	}
 
 	#[pallet::pallet]
