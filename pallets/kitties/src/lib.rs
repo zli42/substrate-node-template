@@ -47,6 +47,7 @@ pub mod pallet {
 	}
 
 	#[pallet::storage]
+	#[pallet::getter(fn kittiesOwned)]
 	pub type KittiesOwned<T: Config> = StorageMap<
 		_,
 		Blake2_128Concat,
@@ -56,9 +57,11 @@ pub mod pallet {
 	>;
 
 	#[pallet::storage]
+	#[pallet::getter(fn kitties)]
 	pub type Kitties<T> = StorageMap<_, Blake2_128Concat, DNA, Kitty<T>>;
 
 	#[pallet::storage]
+	#[pallet::getter(fn kittiesCount)]
 	pub type KittiesCount<T> = StorageValue<_, u32, ValueQuery>;
 
 	#[pallet::event]
