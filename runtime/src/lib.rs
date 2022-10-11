@@ -46,6 +46,8 @@ pub use sp_runtime::{Perbill, Permill};
 /// Import the template pallet.
 pub use pallet_template;
 
+pub use pallet_poe;
+
 /// An index to a block.
 pub type BlockNumber = u32;
 
@@ -272,6 +274,8 @@ impl pallet_template::Config for Runtime {
 
 impl pallet_poe::Config for Runtime {
 	type Event = Event;
+	type MaxClaimLength = ConstU32<512>;
+	type WeightInfo = pallet_poe::weights::SubstrateWeight<Runtime>;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -338,6 +342,7 @@ mod benches {
 		[pallet_balances, Balances]
 		[pallet_timestamp, Timestamp]
 		[pallet_template, TemplateModule]
+		[pallet_poe, PoeModule]
 	);
 }
 

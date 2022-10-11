@@ -22,6 +22,10 @@ frame_support::construct_runtime!(
 	}
 );
 
+frame_support::parameter_types! {
+	pub const MaxClaimLength: u8 = 3;
+}
+
 impl system::Config for Test {
 	type BaseCallFilter = frame_support::traits::Everything;
 	type BlockWeights = ();
@@ -51,6 +55,8 @@ impl system::Config for Test {
 
 impl pallet_poe::Config for Test {
 	type Event = Event;
+	type MaxClaimLength = MaxClaimLength;
+	type WeightInfo = ();
 }
 
 // Build genesis storage according to the mock runtime.
