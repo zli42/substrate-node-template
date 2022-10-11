@@ -1,4 +1,30 @@
+### test
+
+```
+cargo test -p pallet-poe
+```
+
 <img width="542" alt="屏幕截图 2022-09-03 201534" src="https://user-images.githubusercontent.com/30396815/188270015-e3428080-1223-4d46-9a52-070fc7b6f255.png">
+
+### benchmark
+
+```
+cargo build --release --features runtime-benchmarks
+```
+
+![Screenshot 2022-10-11 125116](https://user-images.githubusercontent.com/30396815/195017814-4a462147-c69d-44e0-8e6c-e5ab5d617592.png)
+
+```
+./target/release/node-template benchmark pallet --chain dev --execution=wasm --wasm-execution=compiled --pallet pallet_poe --extrinsic * --steps 20 --repeat 10 --output=./pallets/poe/src/weights.rs --template .maintain/frame-weight-template.hbs
+```
+
+### chain spec
+
+```
+./target/release/node-template build-spec > chain-spec-plain.json
+./target/release/node-template build-spec --chain chain-spec-plain.json --raw > chain-spec.json
+```
+
 
 # Substrate Node Template
 
